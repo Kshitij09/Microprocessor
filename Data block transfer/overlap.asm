@@ -71,7 +71,7 @@ _start:
 	print_result:
 		println newline,1
 		println msg2,len2
-		mov rdi,array+40
+		mov rdi,array+16
 		call printarray
 
 exit:
@@ -83,23 +83,24 @@ exit:
 
 ;Without string instruction
 wo_string:
-	mov rsi,array
-	mov rdi,array+40
+	mov rsi,array+32
+	mov rdi,array+48
 	mov byte[count],05
 	up:
 		mov rax,qword[rsi]
 		mov qword[rdi],rax
-		add rsi,8
-		add rdi,8
+		sub rsi,8
+		sub rdi,8
 		dec byte[count]
 	jnz up
 jmp print_result
 
 ;With string instruction
 with_string:
-	mov rsi,array
-	mov rdi,array+40
+	mov rsi,array+32
+	mov rdi,array+48
 	mov byte[count],05
+	std
 	up2:
 		movsq
 		dec byte[count]
