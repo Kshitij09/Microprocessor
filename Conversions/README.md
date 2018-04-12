@@ -7,6 +7,6 @@
 1. Push the remainder
 1. Increment the count
 1. Pop from stack count times
-1. print each digit by converting to ASCII
+1. Print each digit by converting to ASCII
 
 ![](screenshots/conv_1.png)

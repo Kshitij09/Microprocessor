@@ -36,7 +36,7 @@ _start:
 	mov rsi,num
 	call HexToBCD	
 	print newline,1
-	
+
 exit:
 	mov rax,60
 	mov rdi,0
@@ -64,6 +64,7 @@ ASCIItoHex:
 	jnz up
 ret
 
+;rsi should point to source
 HexToBCD:
 	call ASCIItoHex
 	;rax has hex number
