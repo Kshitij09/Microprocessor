@@ -14,8 +14,8 @@
 
 #### BCD to Hex conversion
 1. Start from end of number
-1. initialize factor by 1
-1. multiply rsi digit by factor
+1. Initialize factor by 1
+1. Multiply last digit by factor
 1. store result in rbx
 1. multiply factor by 10
 1. Repeat from step 3 for no. of digits
