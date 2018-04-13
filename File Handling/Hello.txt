@@ -1,0 +1,4 @@
+Hello World,
+This is a sample program to read from file
+
+**This line is appended to file by the program
