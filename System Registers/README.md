@@ -6,4 +6,4 @@
 1. LDTR
 1. TR
 
-![](screenshots/reg_1.png)
+![](reg_1.png)
