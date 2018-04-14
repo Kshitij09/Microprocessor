@@ -56,8 +56,8 @@ filename: resb 100
 section .text
 global _start
 _start:
-	pop rbx				;sourcefile name
 	pop rbx				;no. of arguments
+	pop rbx				;sourcefile name 
 	pop rbx				;1st argument (filename)
 
 	call get_filename
@@ -94,10 +94,6 @@ get_filename:
 	mov rdi,filename
 	up:
 		movsb
-		; mov al,byte[rsi]
-		; mov byte[rdi],al
-		; inc rsi
-		; inc rdi
 		cmp byte[rsi],00
 	jne up
 ret
