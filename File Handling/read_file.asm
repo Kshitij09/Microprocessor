@@ -93,10 +93,11 @@ get_filename:
 	mov rsi,rbx
 	mov rdi,filename
 	up:
-		mov al,byte[rsi]
-		mov byte[rdi],al
-		inc rsi
-		inc rdi
-		cmp al,00
+		movsb
+		; mov al,byte[rsi]
+		; mov byte[rdi],al
+		; inc rsi
+		; inc rdi
+		cmp byte[rsi],00
 	jne up
 ret
