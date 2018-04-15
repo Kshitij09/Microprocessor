@@ -81,7 +81,7 @@ _start:
 	xor rdx,rdx
 	xor rbx,rbx
 	mov rcx,qword[count]		;i
-	mov rcx,qword[count]		;j
+	mov rdx,qword[count]		;j
 	dec rcx						;i-1
 	dec rdx						;j-1
 	loopI:
